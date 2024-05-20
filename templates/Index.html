@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>Barcode Scanner</h1>
+    </header>
+
+    <section class="main-content">
+        <form action="/barcode_image" method="post" enctype="multipart/form-data">
+            <label for="image-upload" class="upload-label">Upload an Image:</label>
+            <input type="file" id="image-upload" name="image" accept="image/*">
+            <button type="submit">Scan Barcode</button>
+        </form>
+        <button class="camera-button" onclick="window.location.href='/barcode_cam'">Scan Barcode from Camera</button>
+    </section>
+
+    <section class="about">
+        <h2>About</h2>
+        <p>Made By Nikunj</p>
+        <p>Contact Info:</p>
+        <ul>
+            <li>Email: <a href="mailto:nikunjthakur006@gmail.com">nikunjthakur006@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/nikunj-5ab5752a2" target="_blank">Nikunj.</a></li>
+            <li>GitHub: <a href="https://github.com/Agent-Nikunj" target="_blank">Agent-Nikunj</a></li>
+        </ul>
+    </section>
+</body>
+</html>
