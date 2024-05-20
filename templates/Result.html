@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Scanner - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>Scan Result</h1>
+    </header>
+
+    <section class="main-content">
+        <ul class="result-list">
+            {% for data, type in barcode_data %}
+                <li>
+                    <strong>Data:</strong> {{ data }}<br>
+                    <strong>Type:</strong> {{ type }}
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>
